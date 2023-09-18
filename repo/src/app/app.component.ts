@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PlayerDto } from './dtos/player.dto';
+import { players } from 'src/assets/players';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'repo';
+  public players: PlayerDto[];
+
+  constructor() {
+    this.players = players;
+  }
 }
