@@ -6,4 +6,4 @@ buildSync({
     bundle: true,
     minify: true,
     tsconfig: './tsconfig.json'
-})
+});

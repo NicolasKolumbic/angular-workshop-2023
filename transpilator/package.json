@@ -1,0 +1,13 @@
+{
+  "name": "transpilator",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node esbuild.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.19.3"
+  }
+}
