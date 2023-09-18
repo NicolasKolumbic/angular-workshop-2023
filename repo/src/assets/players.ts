@@ -31,7 +31,7 @@ export const players = [
         tShirtNumber: 12,
         currentClub: 'Villarreal',
         countryClub: 'SPAIN',
-        photo: '',
+        photo: 'geronimo-rulli',
         position: 0,
         isInside: false,
         yellowCard: 0
@@ -43,7 +43,7 @@ export const players = [
         tShirtNumber: 8,
         currentClub: 'Sevilla',
         countryClub: 'SPAIN',
-        photo: '',
+        photo: 'marcos-acuña',
         position: 1,
         isInside: false,
         yellowCard: 0
@@ -55,7 +55,7 @@ export const players = [
         tShirtNumber: 2,
         currentClub: 'Villarreal',
         countryClub: 'SPAIN',
-        photo: '',
+        photo: 'juan-foyth',
         position: 1,
         isInside: false,
         yellowCard: 0
@@ -67,7 +67,7 @@ export const players = [
         tShirtNumber: 25,
         currentClub: 'Manchester United',
         countryClub: 'ENGLAND',
-        photo: '',
+        photo: 'lisandro-martinez',
         position: 1,
         isInside: false,
         yellowCard: 0
@@ -79,7 +79,7 @@ export const players = [
         tShirtNumber: 26,
         currentClub: 'Atletico Madrid',
         countryClub: 'SPAIN',
-        photo: '',
+        photo: 'nahuel-molina',
         position: 1,
         isInside: false,
         yellowCard: 0
@@ -91,7 +91,7 @@ export const players = [
         tShirtNumber: 4,
         currentClub: 'Sevilla',
         countryClub: 'SPAIN',
-        photo: '',
+        photo: 'gonzalo-montiel',
         position: 1,
         isInside: false,
         yellowCard: 0
@@ -173,7 +173,7 @@ export const players = [
         tShirtNumber: 17,
         currentClub: 'Sevilla',
         countryClub: 'SPAIN',
-        photo: '',
+        photo: 'alejandro-gomez',
         position: 2,
         isInside: false,
         yellowCard: 0
@@ -185,7 +185,7 @@ export const players = [
         tShirtNumber: 20,
         currentClub: 'Brighton',
         countryClub: 'ENGLAND',
-        photo: '',
+        photo: 'alexis-mac-allister',
         position: 2,
         isInside: false,
         yellowCard: 0
