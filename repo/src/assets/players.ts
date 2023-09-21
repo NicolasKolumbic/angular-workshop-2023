@@ -9,7 +9,6 @@ export const players = [
         photo: 'emiliano-martinez',
         position: 0,
         isInside: false,
-
         yellowCard: 0
     },
     {

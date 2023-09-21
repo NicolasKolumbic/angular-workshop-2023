@@ -13,4 +13,8 @@ export class AppComponent {
   constructor() {
     this.players = players;
   }
+
+  filter(player: PlayerDto) {
+    return player.age > 30;
+  }
 }
