@@ -1,9 +1,8 @@
-<div>
-  <h2>Page Home</h2>
-  <ul class="card-list">
-      <li *appFilterPlayer="let player of players; conditional: filter">
-        <strong >{{player | json}}</strong>
-      </li>  
-  </ul>
+<div class="text-center">
+  <h2 appHighlight>Page Home</h2>
+  <div>
+    <button type="button" appAlertButton>Mostrar Alert</button>
+  </div>
+  
 </div>
 

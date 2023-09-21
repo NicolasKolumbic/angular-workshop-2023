@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AppFilterPlayer } from './directives/filter-player.directive';
-import { NotDirective } from './directives/not.directive';
 import { PlayerComponent } from './components/player/player.component';
+import { AlertButtonDirective } from './directives/alert-button.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppFilterPlayer,
-    NotDirective,
-    PlayerComponent
+    PlayerComponent,
+    AlertButtonDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule
