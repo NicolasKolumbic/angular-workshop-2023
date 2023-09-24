@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Player } from 'src/app/models/player.model';
+import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  players: Player[] = [];
+
+  // injectamos el servicio en el CONSTRUCTOR de la CLASE que actua como COMPONENTE.
+    constructor(private playerService: PlayerService) {
+      const data = this.playerService.getAll();
+    }
 }
