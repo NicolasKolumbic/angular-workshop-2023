@@ -12,7 +12,8 @@ export class HomeComponent {
   players: Player[] = [];
 
   // injectamos el servicio en el CONSTRUCTOR de la CLASE que actua como COMPONENTE.
+  // Este consumirá el servicio que hemos creado.
     constructor(private playerService: PlayerService) {
-      const data = this.playerService.getAll();
+      this.players = this.playerService.getAll();
     }
 }

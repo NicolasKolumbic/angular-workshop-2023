@@ -17,6 +17,8 @@ export class PlayerService {
 
   getAll() {
     console.log(this.players)
+    // iteramos cada jugador y creamos una instancia de la clase PLAYER por cada iteracion
+    // De esta forma reemplazamos PLAYERDTO por PLAYER.
     const playersModel = this.players.map((playerDto: PlayerDto) => new Player(playerDto));
     console.log(playersModel); 
     return this.players;

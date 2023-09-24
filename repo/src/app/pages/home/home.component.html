@@ -1,8 +1,31 @@
 <div>
     <p><strong>[app-home]</strong> Home Page</p>
     <ul class="player">
-        <li *ngFor="let player of players">
-            
+        <li *ngFor="let player of players" class="player__item">
+            <figure class="player__item__photo">
+                <img [src]="'assets/players/' + player.photo + '.jpeg'" />
+            </figure>
+            <h3>{{player.name + ' ' + player.lastName}}</h3>
+            <ul>
+                <li>
+                    <strong>Edad:</strong>
+                    {{player.age}}
+                </li>
+                <li>
+                    <strong>Club:</strong>
+                    {{player.currentClub}}
+                    ({{player.countryClub}})
+                </li>
+                <li [ngSwitch]="player.position">
+                   <span *ngSwitchCase="0">ARQUERO</span>
+                   <span *ngSwitchCase="1">DEFENSOR</span>
+                   <span *ngSwitchCase="2">MEDIOCAMPISTA</span>
+                   <span *ngSwitchCase="3">DELANTERO</span>
+                </li>
+                <li *ngIf="player.yellowCard > 0">
+                    <span class="yellow-card"></span>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>

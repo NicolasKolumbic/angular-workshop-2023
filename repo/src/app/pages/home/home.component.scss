@@ -4,3 +4,22 @@
     flex: 1 1 auto;
     padding: 0 1rem;
 }
+
+.player {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__item {
+        width: calc(25% - 1rem);
+
+        &__photo {
+            overflow: hidden;
+            margin: 0;
+            height: 192px;
+        }
+    }
+}
