@@ -3,23 +3,21 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { PlayerListComponent } from '../pages/player-list/player-list.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent,
-    PlayerListComponent
-  ],
-  imports: [
-    CommonModule
+    FooterComponent
   ],
   exports: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent,
-    PlayerListComponent
+    FooterComponent
+  ],
+  imports: [
+    AppRoutingModule
   ]
 })
 export class SharedModule { }

@@ -8,15 +8,15 @@ import { Player } from '../models/player.model';
 })
 export class PlayerService {
   
-  private players: Player[] = players.map((playerDto: PlayerDto) => new Player(playerDto));
+ private players: Player[] = players.map((player: PlayerDto) => new Player(player));
 
-  constructor() {
-    console.log(this.players)
-  }
+ constructor() {
+  console.log(this.players);
+ }
 
-  get Players() {
+ get Players() {
     return this.players;
-  }
+ }
 
   moveToBench({fullName}: Player) {
     this.players = this.players.map((player: Player) => {
@@ -35,5 +35,6 @@ export class PlayerService {
       return player;
    });
   }
+
  
 }

@@ -13,8 +13,7 @@ export class HomeComponent {
   goalKeepers: Player[] = [];
 
     constructor(private playerService: PlayerService) {
-      const players = this.playerService.Players.filter((player: Player) => player.position === PositionPlayer.Goalkeeper);
-      this.goalKeepers = players;
+      this.goalKeepers = this.playerService.Players.filter((player: Player) => player.position === PositionPlayer.Goalkeeper); 
     }
 
     updatePlayer(player: Player) {
