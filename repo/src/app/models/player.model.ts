@@ -32,12 +32,4 @@ export class Player {
         this.tShirtNumber = playerDto.tShirtNumber;
         this.yellowCard = playerDto.yellowCard;
     }
-
-    moveToBench() {
-        this.isInside = false;
-    }
-
-    moveToStadium() {
-        this.isInside = true;
-    }
 }

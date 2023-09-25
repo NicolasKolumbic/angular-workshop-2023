@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Player } from 'src/app/models/player.model';
 import { PlayerService } from 'src/app/services/player.service';
+import { PositionPlayer } from 'src/app/shared/enums/position-player';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,28 @@ import { PlayerService } from 'src/app/services/player.service';
 })
 export class HomeComponent {
 
-  players: Player[] = [];
+  goalKeepers: Player[] = [];
 
-  // injectamos el servicio en el CONSTRUCTOR de la CLASE que actua como COMPONENTE.
-  // Este consumirá el servicio que hemos creado.
     constructor(private playerService: PlayerService) {
-      this.players = this.playerService.getAll();
+      const players = this.playerService.Players.filter((player: Player) => player.position === PositionPlayer.Goalkeeper);
+      this.goalKeepers = players;
     }
+
+    updatePlayer(player: Player) {
+      if(player.isInside) {
+        this.playerService.moveToBench(player);
+      } else {
+        this.playerService.moveToStadium(player);
+      }
+    }
+
+     //this.goalKeepers = players.map((player: Player) => new Player(player));
+     /*
+      [
+           {...players[0]} as Player,
+           {...players[1]} as Player,
+           {...players[2]} as Player,
+      ] 
+      * */ 
+
 }

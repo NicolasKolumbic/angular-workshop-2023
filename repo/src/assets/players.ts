@@ -20,7 +20,7 @@ export const players = [
         countryClub: 'ARGENTINA',
         photo: 'franco-armani',
         position: 0,
-        isInside: true,
+        isInside: false,
         yellowCard: 0
     },
     {

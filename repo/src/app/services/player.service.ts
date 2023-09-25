@@ -8,19 +8,32 @@ import { Player } from '../models/player.model';
 })
 export class PlayerService {
   
-  players: Player[] = [];
+  private players: Player[] = players.map((playerDto: PlayerDto) => new Player(playerDto));
 
   constructor() {
-    // definimos que el JSON de jugadores luce como una ARRAY de jugadores
-    this.players = players as Player[];
+    console.log(this.players)
   }
 
-  getAll() {
-    console.log(this.players)
-    // iteramos cada jugador y creamos una instancia de la clase PLAYER por cada iteracion
-    // De esta forma reemplazamos PLAYERDTO por PLAYER.
-    const playersModel = this.players.map((playerDto: PlayerDto) => new Player(playerDto));
-    console.log(playersModel); 
+  get Players() {
     return this.players;
   }
+
+  moveToBench({fullName}: Player) {
+    this.players = this.players.map((player: Player) => {
+      if(fullName === player.fullName) {
+        player.isInside = false;
+      }
+      return player;
+   });
+  }
+
+  moveToStadium({fullName}: Player) {
+    this.players = this.players.map((player: Player) => {
+      if(fullName === player.fullName) {
+        player.isInside = true;
+      }
+      return player;
+   });
+  }
+ 
 }

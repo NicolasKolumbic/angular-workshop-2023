@@ -1,5 +1,5 @@
 <div>
-    <p><strong>[app-home]</strong> Home Page</p>
+    <h2><strong>[app-player-list]</strong>Jugadores</h2>
     <ul class="players">
         <li *ngFor="let player of goalKeepers" class="players__item">
                 <figure class="players__item__photo">
@@ -10,9 +10,9 @@
                         <h3>{{player.fullName}}</h3>
                     </li>
                     <li>
-                        <input type="checkbox" [checked]="player.isInside" class="players__item__control" (change)="updatePlayer(player)" />
+                        <input type="checkbox" class="players__item__control" [checked]="player.isInside" (change)="updatePlayer(player)" />
                     </li>
                 </ul>
         </li>
-    </ul>
+    </ul>   
 </div>
