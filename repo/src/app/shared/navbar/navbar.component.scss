@@ -10,4 +10,9 @@ ul {
     list-style-type: none;
     padding: 1rem;
     margin:0;
+
+    li a {
+        text-decoration: none;
+        color: white;
+    }
 }

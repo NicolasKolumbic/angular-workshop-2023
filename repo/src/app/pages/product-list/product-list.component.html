@@ -1,0 +1,12 @@
+<div>
+    <ul class="list">
+        <li *ngFor="let item of products" class="">
+            <h4>{{item.productName}}</h4>
+            <img [src]="'./assets/products/'+ item.image + '.jpg'" />
+            <button (click)="add(item)">Agregar 1</button>
+            <button (click)="remove(item)">Restar 1</button>
+        </li>
+    </ul>
+    <app-shopping-cart-board></app-shopping-cart-board>
+</div>
+

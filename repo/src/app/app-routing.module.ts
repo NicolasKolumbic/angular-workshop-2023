@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './pages/home/home.component';
-import { PlayerListComponent } from './pages/player-list/player-list.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {
       path: '',
-      component: HomeComponent
+      component: ProductListComponent
   },
   {
-      path: 'jugadores',
-      component: PlayerListComponent
+      path: 'shopping-cart',
+      component: ShoppingCartComponent
   }
 ];
 

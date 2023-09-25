@@ -1,0 +1,9 @@
+
+<div class="shopping-cart-board">
+    <h3>Carrito de Compras</h3>
+    <ul class="list">
+        <li *ngFor="let item of shoppingCartItems" class="list__item">
+            <p><span class="box">{{item.count}}</span>{{item.productName}}</p>
+        </li>
+    </ul>
+</div>

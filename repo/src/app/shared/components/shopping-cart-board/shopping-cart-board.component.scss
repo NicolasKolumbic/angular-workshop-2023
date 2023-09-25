@@ -1,0 +1,21 @@
+.box {
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.list {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+        margin: 0.5rem 0;
+        overflow: hidden;
+    }
+}
+
+.shopping-cart-board {
+    padding: 0 1rem;
+}

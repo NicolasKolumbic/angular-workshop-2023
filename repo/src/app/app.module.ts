@@ -7,12 +7,16 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { PlayerListComponent } from './pages/player-list/player-list.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PlayerListComponent
+    PlayerListComponent,
+    ProductListComponent,
+    ShoppingCartComponent
   ],
   imports: [
     CommonModule,
