@@ -11,9 +11,9 @@ export class HomeComponent {
 
   players: Player[] = [];
 
-    constructor(
-      private loggerService: LoggerService
-    ) {
-      this.loggerService.log('message from LoggerService')
-    }
+  constructor(
+    private loggerService: LoggerService
+  ) {
+    this.loggerService.log('message from LoggerService')
+  }
 }

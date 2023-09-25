@@ -16,7 +16,12 @@ import { EvenBetterLoggerService } from './services/even-better-logger.service';
     BrowserModule,
     SharedModule
   ],
-  providers: [{ provide: LoggerService, useClass: EvenBetterLoggerService }],
+  providers: [
+    { 
+      provide: LoggerService,
+      useClass: EvenBetterLoggerService 
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
