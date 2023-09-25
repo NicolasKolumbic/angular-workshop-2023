@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { Player } from 'src/app/models/player.model';
-import { LoggerService } from '../../services/logger.service';
+import { Component, OnInit } from '@angular/core';
+import { LoggerService } from 'src/app/services/logger.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +8,10 @@ import { LoggerService } from '../../services/logger.service';
 })
 export class HomeComponent {
 
-  players: Player[] = [];
+  constructor(private loggerService: LoggerService) {}
 
-  constructor(
-    private loggerService: LoggerService
-  ) {
-    this.loggerService.log('message from LoggerService')
+  logMessage() {
+    this.loggerService.log('Este es un mensaje de registro');
   }
+ 
 }

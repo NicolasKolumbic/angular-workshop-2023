@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NewLoggerService } from './new-logger.service';
+import { ConsoleLoggerService } from './console-logger.service';
 
-describe('NewLoggerService', () => {
-  let service: NewLoggerService;
+describe('ConsoleLoggerService', () => {
+  let service: ConsoleLoggerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NewLoggerService);
+    service = TestBed.inject(ConsoleLoggerService);
   });
 
   it('should be created', () => {

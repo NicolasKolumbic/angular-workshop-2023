@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NewLoggerService {
-
-  constructor() { }
+export abstract class LoggerService {
+  abstract log(message: string): void;
 }
