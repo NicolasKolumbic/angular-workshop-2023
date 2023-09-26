@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Player } from 'src/app/models/player.model';
-import { LoggerService } from '../../services/logger.service';
+import { AppConfig } from 'src/app/abstractions/app-config';
+import { APP_CONFIG } from 'src/app/app.config';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,13 @@ import { LoggerService } from '../../services/logger.service';
 export class HomeComponent {
 
   players: Player[] = [];
+  loggerService: any;
 
   constructor(
-    private loggerService: LoggerService
+   @Inject(APP_CONFIG) config: AppConfig
   ) {
-    this.loggerService.log('message from LoggerService')
+    console.log(config);
   }
 }
+
+

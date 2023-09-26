@@ -4,8 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
-import { LoggerService } from './services/logger.service';
-import { EvenBetterLoggerService } from './services/even-better-logger.service';
+import { Config } from './models/config';
+
+import { InjectionToken } from '@angular/core';
+import { AppConfig } from './abstractions/app-config';
+
+export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
+
 
 @NgModule({
   declarations: [
@@ -18,8 +23,8 @@ import { EvenBetterLoggerService } from './services/even-better-logger.service';
   ],
   providers: [
     { 
-      provide: LoggerService,
-      useClass: EvenBetterLoggerService 
+      provide: Config,
+      useValue: APP_CONFIG 
     }
   ],
   bootstrap: [AppComponent]
