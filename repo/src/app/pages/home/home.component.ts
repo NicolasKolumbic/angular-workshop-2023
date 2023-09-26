@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { Player } from 'src/app/models/player.model';
 import { AppConfig } from 'src/app/abstractions/app-config';
 import { APP_CONFIG } from 'src/app/app.config';
+import { Config } from 'src/app/models/config';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent {
   loggerService: any;
 
   constructor(
-   @Inject(APP_CONFIG) config: AppConfig
+   @Inject(Config) config: AppConfig
   ) {
     console.log(config);
   }

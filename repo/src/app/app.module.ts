@@ -6,11 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { Config } from './models/config';
 
-import { InjectionToken } from '@angular/core';
-import { AppConfig } from './abstractions/app-config';
-
-export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
-
+import { APP_CONFIG } from './app.config';
 
 @NgModule({
   declarations: [
