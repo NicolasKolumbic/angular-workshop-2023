@@ -1,0 +1,12 @@
+<div>
+    <h3>Parent Component</h3>
+    <p>
+        message from Child Component:
+        <strong>{{messageFromChild}}</strong>
+    </p>
+    <div>
+        send message to Child Component
+        <input type="text" [(ngModel)]="parentValue"  />
+    </div>
+    <app-child [value]="parentValue" (messageToParent)="catchMessageFromChild($event)"></app-child>
+</div>

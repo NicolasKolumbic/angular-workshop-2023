@@ -1,0 +1,16 @@
+<div>
+    <h3>Child Component</h3>
+    <p>
+        <code>@Input() value</code>
+    </p>
+    <p>
+        <code>@Output() messageToParent</code>
+    </p>
+    <p>
+        message from Parent Component
+        <strong>{{value}}</strong>
+    </p>
+    send message to Parent Component
+    <input type="text" [(ngModel)]="childValue" (keyup)="sendToParent($event)" />
+</div>
+
