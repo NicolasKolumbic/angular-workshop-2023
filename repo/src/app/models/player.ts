@@ -1,17 +1,23 @@
-import { CourtPosition } from "../shared/enums/court-position";
+import { PositionPlayer } from "../shared/enums/court-position";
+
 
 export class Player {
-    fullName!: string;
-    isInside!: boolean;
-    tshirtNumber!: number;
+     name!: string;
+    lastName!: string;
     currentClub!: string;
-    position!: CourtPosition;
+    countryClub!: string;
+    age!: number;
+    tShirtNumber!: number;
+    photo!: string;
+    position!: PositionPlayer;
+    isInside!: boolean;
+    yellowCard!: number;
 
-    constructor(player: any) {
-        this.fullName = player.fullName;
-        this.isInside = player.isInside;
-        this.tshirtNumber = player.tshirtNumber;
-        this.currentClub = player.currentClub;
-        this.position = player.position;
+    get fullName(): string {
+        return `${this.name} ${this.lastName}`
+    }
+
+    get fullCurrentClub(): string {
+        return `${this.currentClub} (${this.countryClub})`;
     }
 }
