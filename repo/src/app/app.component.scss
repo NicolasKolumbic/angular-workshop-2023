@@ -1,0 +1,19 @@
+.change-strategy-detection {
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: black white;
+}
+
+.change-strategy-detection::-webkit-scrollbar {
+    width: 5px;
+}
+
+.change-strategy-detection::-webkit-scrollbar-track {
+    background: white;
+}
+
+.change-strategy-detection::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: none;
+}
