@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Player } from '../models/player';
 
 @Component({
   selector: 'app-bench-of-substitutes',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./bench-of-substitutes.component.scss']
 })
 export class BenchOfSubstitutesComponent {
-    @Input() players: any[] = [];
+    @Input() players: Player[] = [];
 }

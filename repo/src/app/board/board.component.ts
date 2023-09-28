@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Player } from '../models/player';
 
 @Component({
   selector: 'app-board',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent {
-
+  @Input() players: Player[] = [];
 }
