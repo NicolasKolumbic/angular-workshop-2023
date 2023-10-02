@@ -8,4 +8,8 @@ import { Player } from '../models/player';
 })
 export class BenchOfSubstitutesComponent {
     @Input() players: Player[] = [];
+
+    update(event: Event, player: Player) {
+        player.isInside = !player.isInside;
+    }
 }

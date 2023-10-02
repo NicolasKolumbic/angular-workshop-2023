@@ -1,0 +1,15 @@
+.board {
+    padding: 1rem;
+    &__stadium {
+        background: url(/assets/background-stadium.jpg) 0 0/cover no-repeat;
+        height: 1042px;
+
+        &__container {
+            box-sizing: border-box;
+            display: flex;
+            column-gap: 110px;
+            padding: 4rem;
+            height: 100%;
+        }
+    }
+}

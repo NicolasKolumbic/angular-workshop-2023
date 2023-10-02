@@ -1,4 +1,5 @@
-import { PositionPlayer } from "../shared/enums/court-position";
+import { PlayerDto } from "../dtos/player-dto";
+import { PositionPlayer } from "../shared/enums/position-player";
 
 
 export class Player {
@@ -19,5 +20,18 @@ export class Player {
 
     get fullCurrentClub(): string {
         return `${this.currentClub} (${this.countryClub})`;
+    }
+
+    constructor(playerDto: PlayerDto) {
+        this.name = playerDto.name;
+        this.lastName = playerDto.lastName;
+        this.age = playerDto.age;
+        this.countryClub = playerDto.countryClub;
+        this.currentClub = playerDto.currentClub;
+        this.isInside = playerDto.isInside;
+        this.photo = playerDto.photo;
+        this.position = playerDto.position;
+        this.tShirtNumber = playerDto.tShirtNumber;
+        this.yellowCard = playerDto.yellowCard;
     }
 }

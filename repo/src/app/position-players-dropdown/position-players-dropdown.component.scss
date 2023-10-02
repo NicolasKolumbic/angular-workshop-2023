@@ -1,0 +1,13 @@
+.position-players-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    &__select {
+        width: 200px;
+        border: 1px solid gray;
+        height: 30px;
+    }
+}

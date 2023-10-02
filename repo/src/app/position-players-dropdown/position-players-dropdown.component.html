@@ -1,0 +1,10 @@
+<div class="position-players-dropdown">
+    <select class="position-players-dropdown__select" *ngFor="let dropdown of playersDropdown">
+        <option value=" ">{{placeholder}}</option>
+        <option class="position-players-dropdown__option"
+         *ngFor="let player of dropdown.players"
+         [value]="player.fullName">
+            {{player.fullName}}
+        </option>
+    </select>
+</div>

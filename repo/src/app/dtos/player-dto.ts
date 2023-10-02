@@ -1,4 +1,4 @@
-import { CourtPosition } from "../shared/enums/court-position";
+import { PositionPlayer } from "../shared/enums/position-player";
 
 export interface PlayerDto {
     name: string;
@@ -8,7 +8,7 @@ export interface PlayerDto {
     age: number;
     tShirtNumber: number;
     photo: string;
-    position: CourtPosition;
+    position: PositionPlayer;
     isInside: boolean;
     yellowCard: number;
 }

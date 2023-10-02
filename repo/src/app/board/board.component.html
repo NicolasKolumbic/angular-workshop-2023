@@ -1,30 +1,10 @@
-<div>
-    <ul>
-        <li *ngFor="let player of players">
-            <figure class="card-list__card__container">
-                <img [src]="'assets/players/' + player.photo + '.jpeg'" class="card-list__card__photo" />
-            </figure>
-            <h3>{{player.name + ' ' + player.lastName}}</h3>
-            <ul>
-                <li>
-                    <strong>Edad:</strong>
-                    {{player.age}}
-                </li>
-                <li>
-                    <strong>Club:</strong>
-                    {{player.currentClub}}
-                    ({{player.countryClub}})
-                </li>
-                <li [ngSwitch]="player.position">
-                   <span *ngSwitchCase="0">ARQUERO</span>
-                   <span *ngSwitchCase="1">DEFENSOR</span>
-                   <span *ngSwitchCase="2">MEDIOCAMPISTA</span>
-                   <span *ngSwitchCase="3">DELANTERO</span>
-                </li>
-                <li *ngIf="player.yellowCard > 0">
-                    <span class="yellow-card"></span>
-                </li>
-            </ul>
-        </li>
-    </ul>
+<div class="board">
+    <div class="board__stadium">
+        <div class="board__stadium__container">
+            <app-position-players-dropdown [selectedPlayers]="goalKeeper" placeholder="Selecciona un arquero" [count]="1"></app-position-players-dropdown>
+            <app-position-players-dropdown [selectedPlayers]="defence" placeholder="Selecciona defensores" [count]="4"></app-position-players-dropdown>
+            <app-position-players-dropdown [selectedPlayers]="midfielder"  placeholder="Selecciona mediocampista" [count]="3"></app-position-players-dropdown>
+            <app-position-players-dropdown [selectedPlayers]="forward"  placeholder="Selecciona delantero" [count]="3"></app-position-players-dropdown>
+        </div>
+    </div>
 </div>
