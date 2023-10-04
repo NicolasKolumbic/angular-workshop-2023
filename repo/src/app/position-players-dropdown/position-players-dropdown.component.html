@@ -1,4 +1,5 @@
 <div class="position-players-dropdown">
+    <span hidden>{{isUpdate()}}</span>
     <select class="position-players-dropdown__select" *ngFor="let dropdown of playersDropdown">
         <option value=" ">{{placeholder}}</option>
         <option class="position-players-dropdown__option"

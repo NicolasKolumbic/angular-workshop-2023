@@ -1,13 +1,8 @@
 <div class="bench-of-substitutes">
+    <span hidden>{{isUpdate()}}</span>
     <ul class="bench-of-substitutes__list">
         <li *ngFor="let player of players" class="bench-of-substitutes__list__item">
-            <label [attr.for]="player.name + player.lastName">
-                <figure class="bench-of-substitutes__list__container">
-                    <img [src]="'assets/players/' + player.photo + '.jpeg'" class="bench-of-substitutes__photo" />
-                </figure>
-                <input type="checkbox" [id]="player.name + player.lastName" (change)="update($event, player)" />
-                <h5 class="bench-of-substitutes__list__fullName">{{player.name + ' ' + player.lastName}}</h5>
-            </label>
+            <app-player [player]="player"></app-player>
         </li>
     </ul>
 </div>

@@ -1,0 +1,38 @@
+:host {
+    display: block; 
+}
+
+.bench-of-substitutes {
+    padding: 1rem;
+
+    &__list {
+        margin:0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        &__item {
+            width: 5%;
+            text-align: center;
+        }
+
+        &__container {
+            overflow: hidden;
+            margin: 0;
+            overflow: hidden;
+            height: 70px;
+            background-color: rgb(226, 249, 242);
+        }
+
+        &__fullName {
+            margin:0;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+    }
+}

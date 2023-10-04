@@ -1,0 +1,8 @@
+<label [attr.for]="player.name + player.lastName">
+    <span hidden>{{isUpdate()}}</span>
+    <figure class="bench-of-substitutes__list__container" *ngIf="player.photo">
+        <img [src]="'assets/players/' + player.photo + '.jpeg'" class="bench-of-substitutes__photo" />
+    </figure>
+    <input type="checkbox" [id]="player.name + player.lastName" (change)="update($event, player)" />
+    <h5 class="bench-of-substitutes__list__fullName">{{player.name + ' ' + player.lastName}}</h5>
+</label>

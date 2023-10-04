@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Player } from '../models/player';
 import { Dropdown } from '../models/dropdown';
 
@@ -6,6 +6,7 @@ import { Dropdown } from '../models/dropdown';
   selector: 'app-position-players-dropdown',
   templateUrl: './position-players-dropdown.component.html',
   styleUrls: ['./position-players-dropdown.component.scss']
+ // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PositionPlayersDropdownComponent {
 
@@ -29,6 +30,27 @@ export class PositionPlayersDropdownComponent {
 
     }
 
-   
+    ngOnInit(): void {
+      console.log('%cOnInit', 'background-color: #795548; color:white padding: 0.35rem 0.75rem');
+    }
+    ngAfterViewInit(): void {
+      console.log('%cAfterViewInit', 'background-color: #795548; color:white padding: 0.35rem 0.75rem');
+    }
+    ngAfterContentInit(): void {
+      console.log('%cAfterContentInit', 'background-color: #795548; color:white padding: 0.35rem 0.75rem');
+    }
+    ngAfterContentChecked(): void {
+      console.log('%cAfterContentChecked', 'background-color: #795548; color:white padding: 0.35rem 0.75rem');
+    }
+    ngAfterViewChecked(): void {
+      console.log('%cAfterViewChecked', 'background-color: #795548; color:white padding: 0.35rem 0.75rem');
+    }
+    ngDoCheck(): void {
+      console.log('%cDoCheck', 'background-color: #795548; color:white padding: 0.35rem 0.75rem');
+    }
+    
+    isUpdate() {
+      console.log('%cPositionPlayersDropdownComponent', 'background-color: #795548; color:white padding: 0.35rem 0.75rem'); 
+    }
 
 }

@@ -8,10 +8,6 @@ import { players } from 'src/assets/players';
 })
 export class PlayersService {
   private players: Player[] = players.map((player: PlayerDto) => new Player(player));
-
-  constructor() {
-   console.log(this.players);
-  }
  
   get Players() {
      return this.players;

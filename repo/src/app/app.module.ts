@@ -6,6 +6,7 @@ import { CoachComponent } from './coach/coach.component';
 import { BenchOfSubstitutesComponent } from './bench-of-substitutes/bench-of-substitutes.component';
 import { BoardComponent } from './board/board.component';
 import { PositionPlayersDropdownComponent } from './position-players-dropdown/position-players-dropdown.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PositionPlayersDropdownComponent } from './position-players-dropdown/po
     CoachComponent,
     BenchOfSubstitutesComponent,
     BoardComponent,
-    PositionPlayersDropdownComponent
+    PositionPlayersDropdownComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule
