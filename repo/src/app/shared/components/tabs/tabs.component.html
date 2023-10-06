@@ -1,0 +1,15 @@
+<div class="tabs">
+    <h4 class="tabs__title">Tabs</h4>
+    <ul class="tabs__list-tab-title">
+        <li *ngFor="let tab of tabsList" class="tabs__list-tab-title__item">
+            <button type="button"
+             (click)="setActive(tab.label)"
+             class="tabs__list-tab-title__button"
+             [class.is-active]="tab.isActive">
+             {{tab.label}}</button>
+        </li>
+    </ul>
+    <div class="tabs__list">
+        <ng-content></ng-content>
+    </div>  
+</div>

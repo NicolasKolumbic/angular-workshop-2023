@@ -1,0 +1,45 @@
+.tabs {
+    border: 1px solid rgb(7, 102, 67);
+    background-color: rgb(156, 235, 206);
+    padding: 1rem;
+
+    &__title {
+        margin:0;
+    }
+
+    &__list {
+        display: flex;
+        position: relative;
+        border: 1px solid black;
+        background-color: white;
+    }
+
+    &__list-tab-title {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: inline-flex;
+        position: relative;
+        bottom: -1px;
+        left: -2px;
+        z-index: 1;
+
+        &__button {
+            border: 1px solid black;
+            background-color: transparent;
+            border-radius: 0.5rem 0.5rem  0 0;
+            padding: 0.5rem 0.5rem 0.25rem;
+            background-color: white;
+        }
+
+        &__item {
+            margin: 0 0.1rem;
+        }
+    }
+}
+
+.is-active {
+    border-bottom-color: transparent;
+    color: rgb(0, 204, 255);
+    font-weight: 600;
+}

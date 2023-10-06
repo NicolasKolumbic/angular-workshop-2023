@@ -1,0 +1,23 @@
+.avatar {
+    margin: 0;
+    border: 5px solid #FF5722;
+    border-radius: 50%;
+    display: inline-block;
+    height: 200px;
+    position: relative;
+
+    &__container {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        right:0;
+        text-align: center;
+
+        &__label {
+            padding: 0.5rem;
+            display: inline-block;
+            background: #FF5722;
+            color: white;
+        }
+    }
+}

@@ -3,12 +3,18 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { TabComponent } from './components/tab/tab.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TabsComponent,
+    TabComponent,
+    AvatarComponent
   ],
   imports: [
     CommonModule
@@ -16,7 +22,10 @@ import { FooterComponent } from './footer/footer.component';
   exports: [
     HeaderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TabsComponent,
+    TabComponent,
+    AvatarComponent
   ]
 })
 export class SharedModule { }
