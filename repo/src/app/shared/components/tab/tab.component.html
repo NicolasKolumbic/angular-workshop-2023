@@ -1,8 +1,9 @@
 <div class="tab" *ngIf="isActive">
     <div class="tab__content" >
-        <div class="tab__content__header">
+        <h3 class="tab__content__header">
             <ng-content select="[tab-header]"></ng-content>
-        </div>
+        </h3>
+        <hr>
         <div class="tab__content__body">
             <ng-content select="[tab-body]"></ng-content>
         </div>

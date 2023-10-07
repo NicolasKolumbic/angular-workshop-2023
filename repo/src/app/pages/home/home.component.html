@@ -2,23 +2,17 @@
     <app-avatar label="Lionel Scaloni">
         <img src="assets/scaloni.png" #image />
     </app-avatar> 
-
    <app-tabs>
-
-        <app-tab label="tab-1">
+        <app-tab *ngFor="let player of goalkeeper" [label]="player.fullName">
             <span tab-header>
-
+                {{player.fullName}}
             </span>
             <div tab-body>
-                tab 1. descripcion
+                <ul>
+                    <li><strong>Club:</strong> {{player.fullCurrentClub}}</li>
+                    <li><strong>Edad:</strong> {{player.age}}</li>
+                </ul>
             </div>
-        </app-tab>
-
-        <app-tab label="tab-2">
-            <div tab-body>
-                tab 2. descripcion
-            </div>
-        </app-tab>
-        
+        </app-tab> 
    </app-tabs>
 </div>
