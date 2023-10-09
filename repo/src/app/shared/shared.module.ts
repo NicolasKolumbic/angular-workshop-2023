@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HostDirective } from './directives/host.directive';
+import { DynamicComponentComponent } from './components/dynamic-component/dynamic-component.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HostDirective,
+    DynamicComponentComponent
   ],
   imports: [
     CommonModule
@@ -16,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
   exports: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HostDirective
   ]
 })
 export class SharedModule { }
