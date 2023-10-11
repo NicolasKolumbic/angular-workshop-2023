@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PlayerComponent } from './components/player/player.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PlayerComponent
   ],
   imports: [
     CommonModule
@@ -16,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
   exports: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PlayerComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,11 @@
+<!--
+    Definimos un contenedor ("ng-container") y utilizamos la directiva "ngComponentOutlet" para
+    plasmar el componente "PlayerComponent". Además le enviamos como parametro el valor de cada iteración a instancia del componente
+    "inputs: {player: player}"              
+-->
+<ul class="player">
+    <li class="player__item" *ngFor="let player of players">
+        <ng-container *ngComponentOutlet="playerComponent; inputs: {player: player}">
+        </ng-container>
+    </li>
+</ul>

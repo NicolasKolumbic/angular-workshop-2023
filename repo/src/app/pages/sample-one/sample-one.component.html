@@ -1,0 +1,27 @@
+<ul class="player">
+    <ng-container *ngFor="let player of players">
+         <li class="player__item" *ngIf="player.position === 0">
+             <figure class="player__item__photo">
+                 <img [src]="'assets/players/' + player.photo + '.jpeg'" />
+             </figure>
+             <h3>{{player.name + ' ' + player.lastName}}</h3>
+             <ul>
+                 <li>
+                     <strong>Edad:</strong>
+                     {{player.age}}
+                 </li>
+                 <li>
+                     <strong>Club:</strong>
+                     {{player.currentClub}}
+                     ({{player.countryClub}})
+                 </li>
+                 <li>
+                    <span>ARQUERO</span>
+                 </li>
+                 <li *ngIf="player.yellowCard > 0">
+                     <span class="yellow-card"></span>
+                 </li>
+             </ul>
+         </li>
+    </ng-container>
+ </ul>
