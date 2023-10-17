@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo De plantilla HTML 5</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+        .card {
+            border: 1px solid grey;
+            box-shadow: 0px 0px 6px rgb(0,0,0, 0.5);
+            padding: 1rem;
+            width: 100px;
+        }
+
+        .card__header {
+            border-bottom: 1px solid rgb(110, 110, 110);
+        }
+    </style>
+</head>
+<body>
+    <template class="template-card">
+        <div class="card">
+            <div class="card__header">
+                <h3></h3>
+            </div>
+            <div class="card__body">
+                <p></p>
+            </div>
+        </div>
+    </template>
+    <div class="container"></div>
+    <form>
+        <fieldset>
+            <div>
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" />
+            </div> 
+            <div>
+                <label for="body">Cuerpo</label>
+                <input type="text" id="body" name="body" />
+            </div>
+            <button type="button" class="add">
+                + Cargar Nueva Tarjeta
+            </button>
+        </fieldset>
+    </form>
+    
+    <script>
+        const template = document.querySelector('.template-card');
+        const container = document.querySelector('.container');
+        const addButton = document.querySelector('.add');
+        const title = document.getElementById('title');
+        const body = document.getElementById('body');
+
+        addButton.addEventListener('click', function() {
+            const cloneTemplate = template.content.cloneNode(true);
+            
+            cloneTemplate.querySelector('.card__header h3').textContent = title.value;
+            cloneTemplate.querySelector('.card__body p').textContent = body.value;
+
+            container.appendChild(cloneTemplate);
+        })
+    </script>
+</body>
+</html>
