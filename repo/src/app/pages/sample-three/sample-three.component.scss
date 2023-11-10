@@ -1,0 +1,21 @@
+.custom-control {
+    &_btn {
+        background-color: black;
+        color: white;
+        margin-left: 1rem;
+    }
+}
+
+.form-controls {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.json {
+    color: green;
+}
+
+.container {
+    margin-top: 2rem;
+}

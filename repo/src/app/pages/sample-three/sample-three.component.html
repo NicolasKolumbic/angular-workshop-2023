@@ -1,0 +1,12 @@
+<div class="container">
+    <form [formGroup]="formGroup" (ngSubmit)="submitHandler($event)">
+        <p class="json">
+            {{formValue | json}}
+        </p>
+        <div class="form-controls">
+            <app-custom-dropdown label="País" [options]="options" formControlName="country"></app-custom-dropdown>
+            <button type="submit" class="custom-control_btn">Enviar</button>
+        </div>
+       
+    </form>
+</div>

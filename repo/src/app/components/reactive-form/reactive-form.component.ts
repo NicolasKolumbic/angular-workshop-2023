@@ -29,7 +29,6 @@ export class ReactiveFormComponent {
   }
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
     console.log(this.profileForm);
   }
 }

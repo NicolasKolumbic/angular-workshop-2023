@@ -1,0 +1,72 @@
+<form #heroForm="ngForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <div>
+            {{ model | json }}
+            <!--Campo NAME-->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" 
+                    class="form-control"
+                    id="name"
+                    required
+                    minlength="3"
+                    [(ngModel)]="model.name"
+                    name="name"
+                    #name="ngModel">
+            </div>
+             <!--Validaciones NAME-->
+            <div *ngIf="name.invalid && name.touched" class="alert alert-danger">
+                <p *ngIf="name.getError('required')">
+                    El campo name es obligatorio
+                </p>
+                <p *ngIf="name.getError('minlength')">
+                    El campo name debe contener al menos {{name.getError('minlength').requiredLength}} caracteres
+                </p>
+            </div>
+            
+             <!--Campo ALTER EGO-->
+            <div class="form-group">
+                <label for="alterEgo">Alter Ego</label>
+                <input 
+                type="text" 
+                class="form-control"
+                id="alterEgo"
+                minlength="3"
+                [(ngModel)]="model.alterEgo"
+                name="alterEgo"
+                #alterEgo="ngModel">
+            </div>
+             <!--Validaciones ALTER EGO-->
+            <div *ngIf="alterEgo.invalid && alterEgo.touched" class="alert alert-danger">
+                <p *ngIf="alterEgo.getError('required')">
+                    El campo Alter ego es obligatorio
+                </p>
+                <p *ngIf="alterEgo.getError('minlength')">
+                    El campo Alter ego debe contener al menos {{alterEgo.getError('minlength').requiredLength}} caracteres
+                </p>
+            </div>
+
+             <!--Campo POWER-->
+            <div class="form-group">
+                <label for="power">Hero Power</label>
+                <select class="form-control"
+                    id="power"
+                    required
+                    [(ngModel)]="model.power" 
+                    #power="ngModel"
+                    name="power">
+                    <option value="0"> </option>
+                    <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+                </select>
+            </div>
+             <!--Validaciones POWER-->
+            <div *ngIf="model.power === '0'" class="alert alert-danger">
+                    El campo Power es obligatorio
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

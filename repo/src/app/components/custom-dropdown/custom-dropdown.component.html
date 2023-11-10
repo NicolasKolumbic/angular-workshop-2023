@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <label *ngIf="label" [for]="formControlName" class="dropdown__label">
+        {{ label }}
+      </label>
+      <select [id]="formControlName" class="dropdown__control">
+        <option 
+          *ngFor="let option of options" 
+          [selected]="option.value === value" 
+          [value]="option.value">
+            {{ option.key }}
+        </option>
+      </select>
+</div>
