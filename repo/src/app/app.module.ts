@@ -13,6 +13,7 @@ import { SampleThreeComponent } from './pages/sample-three/sample-three.componen
 import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component';
 import { CommonModule } from '@angular/common';
 import { CustomFieldComponent } from './components/custom-field/custom-field.component';
+import { ReactiveFormWithBuilderComponent } from './components/reactive-form-with-builder/reactive-form-with-builder.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CustomFieldComponent } from './components/custom-field/custom-field.com
     ValidatedReactiveFormComponent,
     SampleThreeComponent,
     CustomDropdownComponent,
-    CustomFieldComponent
+    CustomFieldComponent,
+    ReactiveFormWithBuilderComponent
   ],
   imports: [
     BrowserModule,
